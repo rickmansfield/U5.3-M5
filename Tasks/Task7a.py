@@ -1,20 +1,19 @@
 from collections import deque
 
 def csBinaryTreeInvert(root):
-    queue = deque()
-    queue.append(root)
-
-    while len(queue) > 0:
-        popped = queue.popleft()
-        temp = popped.left
-
-        popped.left = popped.right
-        popped.right = temp
-
-        if popped.left:
-            queue.append(popped.left)
+    q = deque()
+    q.append(root)
+    
+    while len(q) > 0:
+        p = q.popleft()
+        t = p.left
         
-        if popped.right:
-            queue.append(popped.right)
-
+        p.left = p.right
+        p.right = t
+        
+        if p.left:
+            q.append(p.left)
+        
+        if p.right:
+            q.append(p.right)       
     return root
