@@ -1,13 +1,5 @@
 """
-root = [11, 6, 16, 4, 8, null, 19]
-lower 8 
-upper 16
-
-     11
-     /\
-    6  16
-   /\   \
-  4  8   19
+WARNING... I could not get this version to work
 """
 output = 35
 def sumRangeInBST(root, lower, upper):
@@ -24,3 +16,15 @@ def sumRangeInBST(root, lower, upper):
             sum += sumRangeInBST(root.right, lower, upper)
         
     return sum
+
+"""
+root = [11, 6, 16, 4, 8, null, 19]
+lower 8 
+upper 16
+
+     11
+     /\
+    6  16
+   /\   \
+  4  8   19
+"""
