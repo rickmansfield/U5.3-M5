@@ -7,6 +7,5 @@ def csBinaryTreeInvert(root):
         nodes(node.right)
         node.left, node.right = node.right, node.left
     
-    
     nodes(root)
     return root 
