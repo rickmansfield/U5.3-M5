@@ -8,13 +8,13 @@
 def reversedLinkedList(r):
     prev = None
     cur = r # usually the head
-    newNext = None
+    tag = None
 
     while cur is not None:
-        newNext = cur.next
+        tag = cur.next
         cur.next = prev
         prev = cur
-        cur = newNext
+        cur = tag
         
     return prev
 
